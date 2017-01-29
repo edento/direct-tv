@@ -37,7 +37,7 @@ directTV.controller('mainController', ['$scope', '$state', '$http', function($sc
     $scope.submitForm = function() {
         console.log("submitting... need to do some validation", $scope.formData);
         $http({
-            url: "http://formspree.io/edentoledano@gmail.com",
+            url: "https://formspree.io/edentoledano@gmail.com",
             data: $.param({
                 email: $scope.formData.email,
                 name: $scope.formData.name,
