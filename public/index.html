@@ -18,7 +18,8 @@
         <div class="content" ng-controller="mainController">
             <ul class="nav nav-tabs">
                 <li role="presentation" ng-class="{active : currentTab.about }"><a ui-sref="about" ng-click="changeView('about')">עלינו</a></li>
-                <li role="presentation" ng-class="{active : currentTab.pricing }"><a ui-sref="pricing" ng-click="changeView('pricing')">כמה זה עולה?</a></li>
+                <li role="presentation" ng-class="{active : currentTab.spec }"><a ui-sref="spec" ng-click="changeView('spec')">מידע טכני</a></li>
+                <li role="presentation" ng-class="{active : currentTab.pricing }"><a ui-sref="pricing" ng-click="changeView('pricing')">מה כלול בחבילה?</a></li>
                 <li role="presentation" ng-class="{active : currentTab.support }"><a ui-sref="support" ng-click="changeView('support')">תמיכה טכנית</a></li>
                 <li role="presentation" ng-class="{active : currentTab.contact }"><a ui-sref="contact" ng-click="changeView('contact')">צור קשר</a></li>
             </ul>

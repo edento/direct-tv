@@ -52,6 +52,7 @@ a {
     padding-bottom: $height_footer;
     .title {
         color: $cl_yellow;
+        padding: 15px 10px;
     }
     .view-content {
         padding-top: 20px;
@@ -69,6 +70,14 @@ a {
                 }
                 .panel-body {
                     color: $cl_dark_gray !important;
+                }
+            }
+        }
+        .spec {}
+        .pricing {
+            .list {
+                li {
+                    line-height: 30px;
                 }
             }
         }

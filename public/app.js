@@ -13,6 +13,11 @@ directTV.config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'pages/pricing.html',
 
             })
+            .state('spec', {
+                url: '/spec',
+                templateUrl: 'pages/spec.html',
+
+            })
             .state('support', {
                 url: '/support',
                 templateUrl: 'pages/support.html',
