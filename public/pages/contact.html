@@ -8,8 +8,7 @@
         <li>בעמוד הפייסבוק שלנו: Direct TV</li>
         <li>או לחלופין, לשלוח פניה מהטופס בעמוד זה</li>
     </ul>
-    <!--<p>אתם מוזמנים ליצור איתנו קשר במספר: 1-700-550-534 או לשלוח מייל לכתובת: sales@dtv.org.il או לבקר אותנו בעמוד הפייסבוק שלנו Direct TV.*</p>-->
-    <form class="form" method="POST" action="http://formspree.io/eden.toledano@gmail.com">
+    <!--<form class="form" method="POST" action="http://formspree.io/eden.toledano@gmail.com">
         <label for="name">שם מלא</label>
         <input class="input" id="name" type="text" name="name" placeholder="">
         <label for="email">כתובת אימייל</label>
@@ -17,7 +16,17 @@
         <label>הודעה</label>
         <textarea class="input area" name="message" placeholder="הכנס כאן את ההודעה שלך"></textarea>
         <button class="submit" type="submit">שלח</button>
-    </form>
+    </form>-->
 
+    <!--<p>אתם מוזמנים ליצור איתנו קשר במספר: 1-700-550-534 או לשלוח מייל לכתובת: sales@dtv.org.il או לבקר אותנו בעמוד הפייסבוק שלנו Direct TV.*</p>-->
+    <form class="form">
+        <label for="name">שם מלא</label>
+        <input class="input" id="name" type="text" name="name" ng-model="formData.name" placeholder="">
+        <label for="email">כתובת אימייל</label>
+        <input class="input ltr" id="email" type="email" name="_replyto" ng-model="formData.email" placeholder="">
+        <label>הודעה</label>
+        <textarea class="input area" name="message" ng-model="formData.message" placeholder="הכנס כאן את ההודעה שלך"></textarea>
+        <button class="submit" type="submit" ng-click="submitForm()">שלח</button>
+    </form>
 
 </section>

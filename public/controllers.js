@@ -1,4 +1,4 @@
-directTV.controller('mainController', ['$scope', '$state', function($scope, $state) {
+directTV.controller('mainController', ['$scope', '$state', '$http', function($scope, $state, $http) {
 
     $scope.currentTab = {
         about: false,
@@ -6,6 +6,12 @@ directTV.controller('mainController', ['$scope', '$state', function($scope, $sta
         support: false,
         contact: false
     };
+
+    $scope.formData = {
+        name: '',
+        email: '',
+        message: ''
+    }
 
     var initView = function() {
         $scope.$on('$stateChangeSuccess',
@@ -16,7 +22,6 @@ directTV.controller('mainController', ['$scope', '$state', function($scope, $sta
             });
     }
 
-    initView();
 
     $scope.changeView = function(viewName) {
         console.log("change view to " + viewName)
@@ -28,6 +33,39 @@ directTV.controller('mainController', ['$scope', '$state', function($scope, $sta
         }
         $scope.currentTab[viewName] = true;
     };
+
+    $scope.submitForm = function() {
+        console.log("submitting... need to do some validation", $scope.formData);
+        $http({
+            url: "http://formspree.io/edentoledano@gmail.com",
+            data: $.param({
+                email: $scope.formData.email,
+                name: $scope.formData.name,
+                message: $scope.formData.message
+            }),
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+        }).then(
+            function success(response) {
+                console.log("response", response);
+                alert("תודה שפנית אלינו, ניצור איתך קשר בהקדם");
+                $scope.formData = {
+                    name: '',
+                    email: '',
+                    message: ''
+                }
+
+            },
+            function error(response) {
+                console.log("response", response);
+                alert("אנא בדוק תקינות הטופס")
+            }
+        );
+    }
+    initView();
 
 
 
