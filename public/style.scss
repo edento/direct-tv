@@ -1,0 +1,129 @@
+$cl_dark_gray: #333;
+$cl_light_gray: #808080;
+$cl_yellow: #FFD900;
+$cl_white: #fff;
+$cl_blue: #54c4d0;
+$height_header: 80px;
+$height_footer: 90px;
+$height_nav: 41px;
+body {
+    direction: rtl;
+    background: $cl_dark_gray;
+    color: $cl_white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.nav-tabs>li {
+    float: right;
+}
+
+a {
+    color: $cl_blue !important;
+    text-decoration: none;
+    // &:hover {
+    //     color: $cl_yellow !important;
+    // }
+}
+
+.container-all {
+    position: relative;
+    min-height: 100vh;
+}
+
+.header {
+    direction: ltr;
+    h1 {
+        padding-left: 20px;
+    }
+}
+
+.content {
+    padding: 10px;
+    padding-bottom: $height_footer;
+    .title {
+        color: $cl_yellow;
+    }
+    .view-content {
+        padding-top: 20px;
+        margin: 0 auto;
+        width: 90%;
+        .about {
+            .message {
+                width: 50%;
+                margin-top: 20px;
+                border-color: rgba(84, 196, 208, 0.3);
+                .panel-heading {
+                    border-color: rgba(84, 196, 208, 0.3);
+                    background-color: rgba(84, 196, 208, 0.1);
+                    color: rgba(84, 196, 208, 1);
+                }
+                .panel-body {
+                    color: $cl_dark_gray !important;
+                }
+            }
+        }
+        .contact {
+            .form {
+                width: 50%;
+                clear: both;
+                .input {
+                    border: none;
+                    background-color: #424242;
+                    border-bottom: 1px solid #5b5b5b;
+                    border-top: 1px solid #222222;
+                    color: #eaeaea;
+                    outline: none;
+                    display: block;
+                    margin-bottom: 15px;
+                    width: 100%;
+                    &.area {
+                        height: 200px;
+                    }
+                }
+                .submit {
+                    background: #555555;
+                    color: $cl_yellow;
+                    border: none;
+                    line-height: 35px;
+                    width: 100px;
+                    font-size: 18px;
+                    // float: left;
+                    outline: none;
+                }
+                &:after {
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    ul {
+        list-style-type: none;
+        display: block;
+        text-align: center;
+        li {
+            display: inline-block;
+            padding-left: 15px;
+            line-height: 90px;
+        }
+    }
+}
+
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html ng-app="direct-tv" lang="en">
+
+<head>
+    <title>Direct TV</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-cloak>
+    <section class="container-all">
+        <header class="header">
+            <!--<img class="musicNote" src="/ext/note.png"></img>-->
+            <h1>Direct TV</h1>
+        </header>
+        <div class="content">
+            <ul class="nav nav-tabs" ng-controller="mainController">
+                <li role="presentation" ng-class="{active : currentTab.about }"><a ui-sref="about" ng-click="changeView('about')">עלינו</a></li>
+                <li role="presentation" ng-class="{active : currentTab.pricing }"><a ui-sref="pricing" ng-click="changeView('pricing')">כמה זה עולה?</a></li>
+                <li role="presentation" ng-class="{active : currentTab.support }"><a ui-sref="support" ng-click="changeView('support')">תמיכה טכנית</a></li>
+                <li role="presentation" ng-class="{active : currentTab.contact }"><a ui-sref="contact" ng-click="changeView('contact')">צור קשר</a></li>
+            </ul>
+            <div class="view-content" ui-view></div>
+        </div>
+        </div>
+
+        <footer class="footer">
+            <ul>
+                <!--<li>צור קשר</li>-->
+                <li>טלפון 1-700-550-534</li>
+                <li>אימייל: <a href="mailto:sales@dtv.org.il?subject=התעניינות בשירות">sales@dtv.org.il</a>
+                </li>
+                <li>בעמוד הפייסבוק שלנו: Direct TV</li>
+            </ul>
+        </footer>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.min.js "></script>
+
+    <script src="app.js "></script>
+    <!--<script src="routes.js "></script>-->
+    <!--<script src="services.js "></script>-->
+    <script src="controllers.js "></script>
+
+</body>
+
+</html>
