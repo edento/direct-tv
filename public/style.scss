@@ -2,7 +2,8 @@ $cl_dark_gray: #333;
 $cl_light_gray: #808080;
 $cl_yellow: #FFD900;
 $cl_white: #fff;
-$cl_blue: #54c4d0;
+// $cl_blue: #54c4d0;
+$cl_blue: #3c86a0;
 $height_header: 80px;
 $height_footer: 90px;
 $height_nav: 41px;
@@ -42,8 +43,17 @@ a {
 
 .header {
     direction: ltr;
+    height: 100px;
+    padding: 10px 10px 0 10px;
     h1 {
         padding-left: 20px;
+        display: inline-block;
+        line-height: 80px;
+        margin: 0;
+        vertical-align: middle;
+    }
+    .logo {
+        height: 100%;
     }
 }
 
