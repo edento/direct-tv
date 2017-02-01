@@ -96,10 +96,14 @@ li.active a {
             }
         }
         .spec {
-            .table {
-                direction: ltr;
-                color: $cl_dark_gray;
-                font-size: 12px;
+            .spec-table {
+                max-width: 950px;
+                margin: 0 auto;
+                .table {
+                    direction: ltr;
+                    color: $cl_dark_gray;
+                    font-size: 12px;
+                }
             }
         }
         .pricing {
