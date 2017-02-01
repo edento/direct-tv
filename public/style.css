@@ -1,10 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo");
 body {
   direction: rtl;
   background: #333;
+  background: #3c86a0;
   color: #fff;
   margin: 0;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Heebo', sans-serif; }
 
 .rtl {
   direction: rtl; }
@@ -16,8 +19,13 @@ body {
   float: right; }
 
 a {
-  color: #3c86a0 !important;
+  color: #FFD900 !important;
   text-decoration: none; }
+  a:hover {
+    color: #E91E63 !important; }
+
+li.active a {
+  color: #E91E63 !important; }
 
 .container-all {
   position: relative;
@@ -28,7 +36,6 @@ a {
   height: 100px;
   padding: 10px 10px 0 10px; }
   .header h1 {
-    padding-left: 20px;
     display: inline-block;
     line-height: 80px;
     margin: 0;
@@ -37,11 +44,14 @@ a {
     height: 100%; }
 
 .content {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   padding-bottom: 90px; }
   .content .title {
     color: #FFD900;
-    padding: 15px 10px; }
+    color: #b32a58 !important;
+    padding: 15px 10px;
+    font-size: 50px;
+    font-weight: bold; }
   .content .view-content {
     padding-top: 20px;
     margin: 0 auto;
@@ -49,11 +59,11 @@ a {
     .content .view-content .about .message {
       width: 50%;
       margin-top: 20px;
-      border-color: rgba(84, 196, 208, 0.3); }
+      border-color: rgba(230, 30, 99, 0.3); }
       .content .view-content .about .message .panel-heading {
-        border-color: rgba(84, 196, 208, 0.3);
-        background-color: rgba(84, 196, 208, 0.1);
-        color: #54c4d0; }
+        border-color: rgba(230, 30, 99, 0.3);
+        background-color: rgba(230, 30, 99, 0.1);
+        color: #e61e63; }
       .content .view-content .about .message .panel-body {
         color: #333 !important; }
     .content .view-content .pricing .list li {

@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
 $cl_dark_gray: #333;
 $cl_light_gray: #808080;
-$cl_yellow: #FFD900;
 $cl_white: #fff;
-// $cl_blue: #54c4d0;
+$cl_blue: #54c4d0;
+// current colors
 $cl_blue: #3c86a0;
+$cl_purple: #E91E63;
+$cl_purple_darker: #b32a58;
+$cl_yellow: #FFD900;
 $height_header: 80px;
 $height_footer: 90px;
 $height_nav: 41px;
 body {
     direction: rtl;
     background: $cl_dark_gray;
+    background: $cl_blue;
     color: $cl_white;
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Heebo', sans-serif;
 }
 
 .rtl {
@@ -29,11 +35,15 @@ body {
 }
 
 a {
-    color: $cl_blue !important;
+    color: $cl_yellow !important;
     text-decoration: none;
-    // &:hover {
-    //     color: $cl_yellow !important;
-    // }
+    &:hover {
+        color: $cl_purple !important;
+    }
+}
+
+li.active a {
+    color: $cl_purple !important;
 }
 
 .container-all {
@@ -46,7 +56,6 @@ a {
     height: 100px;
     padding: 10px 10px 0 10px;
     h1 {
-        padding-left: 20px;
         display: inline-block;
         line-height: 80px;
         margin: 0;
@@ -58,11 +67,14 @@ a {
 }
 
 .content {
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     padding-bottom: $height_footer;
     .title {
         color: $cl_yellow;
+        color: $cl_purple_darker !important;
         padding: 15px 10px;
+        font-size: 50px;
+        font-weight: bold;
     }
     .view-content {
         padding-top: 20px;
@@ -72,11 +84,11 @@ a {
             .message {
                 width: 50%;
                 margin-top: 20px;
-                border-color: rgba(84, 196, 208, 0.3);
+                border-color: rgba(230, 30, 99, 0.3);
                 .panel-heading {
-                    border-color: rgba(84, 196, 208, 0.3);
-                    background-color: rgba(84, 196, 208, 0.1);
-                    color: rgba(84, 196, 208, 1);
+                    border-color: rgba(230, 30, 99, 0.3);
+                    background-color: rgba(230, 30, 99, 0.1);
+                    color: rgba(230, 30, 99, 1);
                 }
                 .panel-body {
                     color: $cl_dark_gray !important;
