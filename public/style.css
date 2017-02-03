@@ -45,7 +45,9 @@ li.active a {
 
 .content {
   padding: 0 10px 10px 10px;
-  padding-bottom: 90px; }
+  padding-bottom: 90px;
+  max-width: 950px;
+  margin: 0 auto; }
   .content .title {
     color: #FFD900;
     color: #b32a58 !important;
@@ -67,14 +69,15 @@ li.active a {
       .content .view-content .about .message .panel-body {
         color: #333 !important; }
     .content .view-content .spec .spec-table {
-      max-width: 950px;
       margin: 0 auto; }
       .content .view-content .spec .spec-table .table {
         direction: ltr;
         color: #333;
         font-size: 12px; }
-    .content .view-content .pricing .list li {
-      line-height: 30px; }
+    .content .view-content .pricing .list {
+      padding-bottom: 15px; }
+      .content .view-content .pricing .list li {
+        line-height: 30px; }
     .content .view-content .contact .form {
       width: 50%;
       clear: both; }

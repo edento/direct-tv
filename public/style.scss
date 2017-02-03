@@ -69,6 +69,8 @@ li.active a {
 .content {
     padding: 0 10px 10px 10px;
     padding-bottom: $height_footer;
+    max-width: 950px;
+    margin: 0 auto;
     .title {
         color: $cl_yellow;
         color: $cl_purple_darker !important;
@@ -97,7 +99,7 @@ li.active a {
         }
         .spec {
             .spec-table {
-                max-width: 950px;
+                // max-width: 950px;
                 margin: 0 auto;
                 .table {
                     direction: ltr;
@@ -108,6 +110,7 @@ li.active a {
         }
         .pricing {
             .list {
+                padding-bottom: 15px;
                 li {
                     line-height: 30px;
                 }
