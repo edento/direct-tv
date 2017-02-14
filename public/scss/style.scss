@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo');
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo.ttf');
+    font-style: normal;
+    font-weight: 400;
+    src: local('Heebo'), local('Heebo-Regular'), url(../fonts/Heebo.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
 $cl_dark_gray: #333;
 $cl_light_gray: #808080;
 $cl_white: #fff;
@@ -20,6 +28,8 @@ body {
     padding: 0;
     height: 100%;
     font-family: 'Heebo', sans-serif;
+    overflow: auto;
+    // -webkit-transform: translate3d(0, 0, 0);
 }
 
 .rtl {
@@ -49,6 +59,8 @@ li.active a {
 .container-all {
     position: relative;
     min-height: 100vh;
+    opacity: 0.99;
+    height: 100%;
 }
 
 .header {

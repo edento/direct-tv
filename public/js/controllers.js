@@ -25,15 +25,22 @@ directTV.controller('mainController', ['$scope', '$state', '$http', 'validator',
         BAD_FORM: 'אנא בדוק תקינות הטופס'
     };
 
+    console.log("before")
+    $(document).ready(function() {
+        console.log("ready!");
+        $(".container-all").css("opacity", 0.99999).css("opacity", 1.0);
+
+    });
+
 
     var initView = function() {
         $scope.$on('$stateChangeSuccess',
             function(event, toState, toParams, fromState, fromParams) {
                 event.preventDefault();
-                console.log("current state is ", $state.current.name);
+                // console.log("current state is ", $state.current.name);
                 $scope.currentTab[$state.current.name] = true;
             });
-    }
+    };
 
 
     $scope.changeView = function(viewName) {
@@ -54,7 +61,6 @@ directTV.controller('mainController', ['$scope', '$state', '$http', 'validator',
             email: validator.isEmailValid($scope.formData.email),
             message: validator.isFilled($scope.formData.message)
         }
-        console.log("Validation: ", isValid);
         if (isValid.name && isValid.email && isValid.message) {
             // if form valid, make request
             $http({
@@ -71,7 +77,7 @@ directTV.controller('mainController', ['$scope', '$state', '$http', 'validator',
                 },
             }).then(
                 function success(response) {
-                    console.log("response", response);
+                    //console.log("response", response);
                     alert("תודה שפנית אלינו, ניצור איתך קשר בהקדם");
                     $scope.formData = {
                         name: '',
@@ -85,6 +91,8 @@ directTV.controller('mainController', ['$scope', '$state', '$http', 'validator',
                     alert(error.BAD_FORM);
                 }
             );
+
+
         } else {
             if (!isValid.email && isValid.name && isValid.message) {
                 alert(error.BAD_EMAIL);
