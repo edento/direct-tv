@@ -25,7 +25,6 @@ directTV.controller('mainController', ['$scope', '$state', '$http', 'validator',
         BAD_FORM: 'אנא בדוק תקינות הטופס'
     };
 
-    console.log("before")
     $(document).ready(function() {
         console.log("ready!");
         $(".container-all").css("opacity", 0.99999).css("opacity", 1.0);
